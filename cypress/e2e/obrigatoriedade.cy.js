@@ -16,7 +16,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
 
   it('CT001 - Validar campos obrigatórios', () => {
     cy.clickBtnEnviar()
-    cy.msgError('Valide os campos obrigatórios!')
+    cy.msgError()
   })
 
   it('CT002 - Validar obrigatoriedade do campo Nome', () => {
@@ -25,7 +25,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.preencherCampo('#email', email)
     cy.preencherCampo('#open-text-area', helpText)
     cy.clickBtnEnviar()
-    cy.msgError('Valide os campos obrigatórios!')
+    cy.msgError()
   })
 
   it('CT003 - Validar obrigatoriedade do campo Sobrenome', () => {
@@ -34,7 +34,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.preencherCampo('#email', email)
     cy.preencherCampo('#open-text-area', helpText)
     cy.clickBtnEnviar()
-    cy.msgError('Valide os campos obrigatórios!')
+    cy.msgError()
   })
 
   it('CT004 - Validar obrigatoriedade do campo Email', () => {
@@ -43,7 +43,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.preencherCampo('#email', email).clear()
     cy.preencherCampo('#open-text-area', helpText)
     cy.clickBtnEnviar()
-    cy.msgError('Valide os campos obrigatórios!')
+    cy.msgError()
   })
 
   it('CT005 - Validar obrigatoriedade do campo Ajuda', () => {
@@ -52,7 +52,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.preencherCampo('#email', email)
     cy.preencherCampo('#open-text-area', helpText).clear()
     cy.clickBtnEnviar()
-    cy.msgError('Valide os campos obrigatórios!')
+    cy.msgError()
   })
 
   it('CT006 - Validar obrigatoriedade do campo Telefone', () => {
@@ -63,7 +63,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.preencherCampo('#phone', phone).clear()
     cy.preencherCampo('#open-text-area', helpText).clear()
     cy.clickBtnEnviar()
-    cy.msgError('Valide os campos obrigatórios!')
+    cy.msgError()
   })
 
 })
