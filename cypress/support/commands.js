@@ -11,3 +11,11 @@ Cypress.Commands.add('msgError', (msg) => {
 Cypress.Commands.add('preencherCampo', (campo, dados) => {
     cy.get(campo).type(dados)
 })
+
+Cypress.Commands.add('marcarCheckbox', (check) => {
+    cy.get(check).check().should('be.checked')
+})
+
+Cypress.Commands.add('campoNaoPreenchido', (campo) => {
+    cy.get(campo).should('be.empty')
+})

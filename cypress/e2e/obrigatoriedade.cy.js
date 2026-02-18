@@ -5,6 +5,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
   const firstName = faker.person.firstName()
   const lastName = faker.person.lastName()
   const email = faker.internet.email({ firstName, lastName })
+  const phone = faker.finance.accountNumber(8)
   const helpText = faker.lorem.sentence(10)
 
 
@@ -35,7 +36,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.clickBtnEnviar()
     cy.msgError('Valide os campos obrigatórios!')
   })
-  
+
   it('CT004 - Validar obrigatoriedade do campo Email', () => {
     cy.preencherCampo('#firstName', firstName)
     cy.preencherCampo('#lastName', lastName)
@@ -54,13 +55,15 @@ describe('CAC - Obrigatoriedade dos campos', () => {
     cy.msgError('Valide os campos obrigatórios!')
   })
 
-  /*  
-  it('', () => {
-    
+  it('CT006 - Validar obrigatoriedade do campo Telefone', () => {
+    cy.preencherCampo('#firstName', firstName)
+    cy.preencherCampo('#lastName', lastName)
+    cy.preencherCampo('#email', email)
+    cy.marcarCheckbox('#phone-checkbox')
+    cy.preencherCampo('#phone', phone).clear()
+    cy.preencherCampo('#open-text-area', helpText).clear()
+    cy.clickBtnEnviar()
+    cy.msgError('Valide os campos obrigatórios!')
   })
-  it('', () => {
-    
-  })
-  */
 
 })
