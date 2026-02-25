@@ -6,9 +6,10 @@ module.exports = defineConfig({
   viewportWidth: 1280,
 
   video: true,
-  fixturesFolder: false,
+  //fixturesFolder: false,
 
   e2e: {
+    fixturesFolder: 'cypress/fixtures',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
