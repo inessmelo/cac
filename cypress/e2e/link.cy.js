@@ -1,4 +1,3 @@
-
 describe('Upload de arquivos', () => {
 
     it('Verifica que a política de privacidade abre em outra aba sem a necessidade de um clique', () => {

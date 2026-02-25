@@ -19,11 +19,3 @@ Cypress.Commands.add('preencherCampo', (campo, dados) => {
 Cypress.Commands.add('marcarCheckbox', (check) => {
     cy.get(check).check().should('be.checked')
 })
-
-Cypress.Commands.add('selecionaProduto', (select, value) => {
-    cy.get('#product').select(select, { force: true }).should('have.value', value)
-})
-
-Cypress.Commands.add('selecionaAtendimento', (atende) => {
-    cy.get('#support-type').check(atende).should('be.checked')
-})
