@@ -9,7 +9,7 @@ describe('CAC - Cenarios negativos', () => {
     const helpText = faker.lorem.sentence(10)
 
     beforeEach( () => {
-        cy.visit('../../src/index.html')
+        cy.visit('/')
         cy.title().should('eq', 'Central de Atendimento ao Cliente TAT')
     }) 
 

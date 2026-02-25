@@ -10,7 +10,7 @@ describe('CAC - Obrigatoriedade dos campos', () => {
 
 
   beforeEach( () => {
-    cy.visit('../../src/index.html')
+    cy.visit('/')
     cy.title().should('eq', 'Central de Atendimento ao Cliente TAT')
   })
 
