@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:test": "cypress run"
+    "cy:open:mobile": "cypress open --config viewportWidth=375 viewportHeight=667",
+    "cy:test": "cypress run",
+    "cy:test:mobile": "cypress run --config viewportWidth=375 viewportHeight=667"
   },
   "repository": {
     "type": "git",
